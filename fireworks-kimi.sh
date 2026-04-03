@@ -15,12 +15,12 @@ set -euo pipefail
 trap 'echo ""; echo -e "\033[0;31mInterrupted\033[0m"; exit 130' INT TERM
 
 # ── Defaults ──────────────────────────────────────────────────────────────
-DEFAULT_API_KEY="fw_Vq4cbbXH1RhJXofLorUHTf"
-DEFAULT_BASE_URL="https://api.fireworks.ai/inference/v1"
+DEFAULT_API_KEY="sk-aio-61f1dea7bdb529a31968f8672c7a45cf"
+DEFAULT_BASE_URL="http://100.111.1.1:30400"
 
 # Fireworks model IDs
-KIMI_K2P5="accounts/fireworks/models/kimi-k2p5"
-KIMI_K2_INSTRUCT="accounts/fireworks/models/kimi-k2-instruct-0905"
+KIMI_K2P5="claude-opus-4-6"
+KIMI_K2_INSTRUCT="claude-haiku-4-5"
 
 API_KEY="${1:-${FIREWORKS_API_KEY:-$DEFAULT_API_KEY}}"
 BASE_URL="${2:-${FIREWORKS_BASE_URL:-$DEFAULT_BASE_URL}}"
