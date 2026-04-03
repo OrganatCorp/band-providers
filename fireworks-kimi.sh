@@ -10,9 +10,9 @@ trap 'echo ""; echo -e "\033[0;31mInterrupted\033[0m"; exit 130' INT TERM
 # CF Worker dịch claude-* → Fireworks kimi-k2p5 (always up, no AIO needed)
 BASE_URL="https://fireworks.organat.vn"
 API_KEY="fw_Vq4cbbXH1RhJXofLorUHTf"
-OPUS_MODEL="claude-opus-4-6"
-SONNET_MODEL="claude-sonnet-4-6"
-HAIKU_MODEL="claude-haiku-4-5"
+OPUS_MODEL="claude-opus-4.6"
+SONNET_MODEL="claude-sonnet-4.6"
+HAIKU_MODEL="claude-haiku-4.5"
 
 GREEN='\033[0;32m'; YELLOW='\033[1;33m'; BLUE='\033[0;34m'; NC='\033[0m'
 log() { printf "${GREEN}[%s]${NC} %s\n" "$(date '+%H:%M:%S')" "$*"; }
@@ -73,7 +73,7 @@ main() {
   echo -e "${BLUE}╚══════════════════════════════════════════════════════╝${NC}"
   echo ""
   log "Endpoint : ${BASE_URL}  (CF Worker → Fireworks)"
-  log "Model    : Kimi K2.5  (dùng claude-opus-4-6 alias)"
+  log "Model    : Kimi K2.5  (dùng claude-opus-4.6 alias)"
   echo ""
   load_nvm; install_claude
   log "Writing ~/.claude/settings.json..."
